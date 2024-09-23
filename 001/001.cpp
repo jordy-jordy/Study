@@ -20,7 +20,7 @@ int main()
 {
     // [B][B][B][B][0]
     int Count = strlen("BBBB");
-    int Count2 = StringCount("BBBB");
+    int Count2 = StringCount("BBBB0");
 
 
 
