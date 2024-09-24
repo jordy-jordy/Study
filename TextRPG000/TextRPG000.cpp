@@ -98,8 +98,8 @@ int main()
     /*char Test1[50] = Test0;
     Test1 = Test0*/;
 
-    CreatePlayer("dgfg", 10, 100);
-    CreateMonster("gjfdhfhf", 10, 50);
+    CreatePlayer("ㅇㄴㅎ호ㅀㅎ라", 10, 100);
+    CreateMonster("8989러ㅏ", 10, 50);
 
     PlayerStatusRender();
     MonsterStatusRender();
