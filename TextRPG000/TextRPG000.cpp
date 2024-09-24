@@ -58,7 +58,18 @@ void CreateMonster(const char* const _Ptr, int _Att, int _Hp)
 
 void StatusRender(const char* _Name, int _Att, int _HP)
 {
-    printf_s("%s Status ------------------------------------\n", _Name);
+    // 내가 얻어야 하는 값 == LINECOUNT - ("_Name" 길이 + "Status " 길이)
+    // A = LINECOUNT - (N + S)
+    int N_len = strlen(_Name);
+    int S_len = strlen("STATUS ");
+    int Length = LINECOUNT - (N_len + S_len);
+    printf_s("%s Status ", _Name);
+    for (int i = 0; i < Length - 1; i++)
+    {
+        printf_s("-");
+    }
+    printf_s("\n");
+
     printf_s("공격력 : %d\n", _Att);
     printf_s("체력 : %d\n", _HP);
 
@@ -87,8 +98,8 @@ int main()
     /*char Test1[50] = Test0;
     Test1 = Test0*/;
 
-    CreatePlayer("1", 10, 100);
-    CreateMonster("Orc", 10, 50);
+    CreatePlayer("dgfg", 10, 100);
+    CreateMonster("gjfdhfhf", 10, 50);
 
     PlayerStatusRender();
     MonsterStatusRender();
