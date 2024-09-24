@@ -52,40 +52,14 @@ const int IntMaxCount = 10;
 const int ParameterInter = 8;
 
 // 함수의 인자는 무조건 8바이트씩 떨어져 있다
-int MyPrintf(const char* const _Ptr, ...) 
+int MyPrintf(const char* const _Ptr, ...)
 {
-	__int64 FAdd = reinterpret_cast<__int64>(&_Ptr); 
+	__int64 FAdd = reinterpret_cast<__int64>(&_Ptr);
 
 	int ChCount = 0;
 
 	while (_Ptr[ChCount])
 	{
-		char Ch = _Ptr[ChCount];
-
-		if (Ch == '%')
-		{
-			Ch = _Ptr[ChCount + 1];
-
-			switch (Ch)
-			{
-			case 'd':
-			{
-				ChCount += 2;
-
-				int* Ptr = reinterpret_cast<int*>(FAdd += ParameterInter);
-				int ConvertValue = *Ptr;
-				char Arr[IntMaxCount] = {};
-				NumberToString(Arr, IntMaxCount, ConvertValue);
-				MyPrintf(Arr);
-				break;
-			}
-			default:
-				break;
-			}
-			// 함수내부에서 자기자신을 다시 호출하는 방식을 사용해볼겁니다.
-			// 이걸 재귀함수라고 부릅니다.
-		}
-
 		putchar(_Ptr[ChCount]);
 		ChCount += 1;
 	}
@@ -106,9 +80,7 @@ void ReFunction()
 
 int main()
 {
-	MyPrintf("Number : %d\n", 465);
-
-
+	MyPrintf("Number : %d\n", 545454);
 
 	int a = 0;
 

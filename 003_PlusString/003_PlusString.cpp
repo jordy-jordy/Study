@@ -5,15 +5,18 @@
 
 void PlusString(char* _Buffer, int _BufferSize, const char* const _Value0, const char* const _Value1)
 {
+
+
+
+
+    // 내가 원하는 값 = AAAABBBB
+    // 즉 printf_s("AAAABBBB\n")
 }
 
 int main()
 {
     char Arr[100] = {};
-
     PlusString(Arr, 100, "AAAA", "BBBB");
-
-    std::cout << "Hello World!\n";
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
