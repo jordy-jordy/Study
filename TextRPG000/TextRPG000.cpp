@@ -2,9 +2,10 @@
 //
 
 #include <iostream>
+#include <conio.h>
+
 
 const int LINECOUNT = 50;
-
 const int NAMELEN = 10;
 
 // 절차지향 
@@ -56,7 +57,7 @@ void CreateMonster(const char* const _Ptr, int _Att, int _Hp)
     MonsterHp = _Hp;
 }
 
-void StatusRender(const char* _Name, int _Att, int _HP)
+void StatusRender(const char *_Name, int _Att, int _HP)
 {
     // 내가 얻어야 하는 값 == LINECOUNT - ("_Name" 길이 + "Status " 길이)
     // A = LINECOUNT - (N + S)
@@ -78,8 +79,25 @@ void StatusRender(const char* _Name, int _Att, int _HP)
         printf_s("-");
     }
     printf_s("\n");
-
     // printf_s("---------------------------------------------------\n");
+}
+
+
+
+void DamageProcess(int& _DefHp, int _Att)
+{
+    // 게임 로직
+    _DefHp -= _Att;
+}
+
+// 클래스의 필요성
+// 함수는 다양한 상황에서 쓸수있게 만들수록 좋다.
+// 함수는 작은 기능을 많이 만들고 
+// 함수는 한번에 1가지 일을 할수록 좋다.
+void Damage(const char* const _AttName, const char* const _DefName, int& _DefHp, int _Att)
+{
+    // 랜더링
+    printf_s("%s 가 %s를 공격해서 %d의 데미지를 입혔습니다.\n", _AttName, _DefName, _Att);
 }
 
 void PlayerStatusRender()
@@ -98,14 +116,40 @@ int main()
     /*char Test1[50] = Test0;
     Test1 = Test0*/;
 
-    CreatePlayer("ㅇㄴㅎ호ㅀㅎ라", 10, 100);
-    CreateMonster("8989러ㅏ", 10, 50);
+    CreatePlayer("Player", 10, 100);
+    CreateMonster("Monster", 10, 50);
 
     PlayerStatusRender();
     MonsterStatusRender();
 
-    // printf_s("싸운다");
-    // 나는 이걸 플레이어라고 생각할 겁니다.
+    while (true)
+    {
+        // 화면 전체를 지워라.
+        // 콘솔창에 다른 프로그램를 실행해주는 프로그램
+        system("cls");
+        char Input = ' ';
+
+        PlayerStatusRender();
+        MonsterStatusRender();
+        Input = _getch();
+
+        system("cls");
+        DamageProcess(MonsterHp, PlayerAtt);
+        PlayerStatusRender();
+        MonsterStatusRender();
+        Damage(PlayerName, MonsterName, MonsterHp, PlayerAtt);
+        Input = _getch();
+
+        system("cls");
+        DamageProcess(PlayerHp, MonsterAtt);
+        PlayerStatusRender();
+        MonsterStatusRender();
+        Damage(PlayerName, MonsterName, MonsterHp, PlayerAtt);
+        Damage(MonsterName, PlayerName, PlayerHp, MonsterAtt);
+        Input = _getch();
+
+
+    }
 
     int a = 0;
 
