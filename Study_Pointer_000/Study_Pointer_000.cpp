@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int PutValue = 4;
+int PutValue = 3;
 
 int ParameterLen = 8;
 int SizeofInt = 4;
