@@ -23,7 +23,7 @@ public:
         return 10 + Damage0;
     }
 
-    // 제가 처음 생각한 함수
+    // 처음 생각한 함수
     int GetDamage01() const
     {
         int Damage1 = rand() % (MaxAtt + 1);
