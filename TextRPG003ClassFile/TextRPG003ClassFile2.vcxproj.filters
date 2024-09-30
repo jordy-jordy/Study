@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="TextRPG003ClassFile.cpp" />
+    <ClCompile Include="..\PlyerAndMonster\EngineConst.cpp">
+      <Filter>0_Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\EngineDebug.cpp">
+      <Filter>0_Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\Object.cpp">
+      <Filter>1_Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\Status.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\FightUnit.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\StatusUnit.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\Monster.cpp">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\Player.cpp">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\Item.cpp">
+      <Filter>2_Contents\1_Actor\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\World.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\FightZone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\Town.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlyerAndMonster\Zone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="0_Base">
+      <UniqueIdentifier>{29593bcb-693c-46b5-9785-2d9de0147f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1_Engine">
+      <UniqueIdentifier>{a98f156d-88bd-422d-a7c7-f06f8f08ce5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents">
+      <UniqueIdentifier>{0f883f07-a814-4184-b2e9-36b1ae31bdae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\0_ContentsBase">
+      <UniqueIdentifier>{f6bdeefa-763d-4638-b415-aa2d3408bcdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\1_Actor">
+      <UniqueIdentifier>{6dd7da14-dc69-4377-8933-a236e266cac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\1_Actor\Component">
+      <UniqueIdentifier>{2c825862-db34-49b4-99c3-82b753481aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\2_Map">
+      <UniqueIdentifier>{83a06741-5e3a-4b24-b3bb-4fc6c99ed13a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\PlyerAndMonster\EngineConst.h">
+      <Filter>0_Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\EngineDebug.h">
+      <Filter>0_Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\Object.h">
+      <Filter>1_Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\Status.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\FightUnit.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\StatusUnit.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\Monster.h">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\Player.h">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\Item.h">
+      <Filter>2_Contents\1_Actor\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\World.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\FightZone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\Town.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\PlyerAndMonster\Zone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
