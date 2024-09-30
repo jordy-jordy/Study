@@ -7,13 +7,34 @@
     <ClCompile Include="Object.cpp">
       <Filter>1_Engine</Filter>
     </ClCompile>
+    <ClCompile Include="PlyerAndMonster.cpp" />
+    <ClCompile Include="World.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineConst.cpp">
+      <Filter>0_Base</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineDebug.cpp">
+      <Filter>0_Base</Filter>
+    </ClCompile>
+    <ClCompile Include="FightUnit.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusUnit.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>2_Contents\1_Actor</Filter>
     </ClCompile>
-    <ClCompile Include="PlyerAndMonster.cpp" />
-    <ClCompile Include="World.cpp">
-      <Filter>2_Contents\2_Zone</Filter>
+    <ClCompile Include="Item.cpp">
+      <Filter>2_Contents\1_Actor\Component</Filter>
     </ClCompile>
+    <ClCompile Include="FightZone.cpp" />
+    <ClCompile Include="Town.cpp" />
+    <ClCompile Include="Zone.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0_Base">
@@ -31,7 +52,10 @@
     <Filter Include="2_Contents\1_Actor">
       <UniqueIdentifier>{f4e02a5d-f48e-4685-8053-aa4cf7310248}</UniqueIdentifier>
     </Filter>
-    <Filter Include="2_Contents\2_Zone">
+    <Filter Include="2_Contents\1_Actor\Component">
+      <UniqueIdentifier>{f1fbbedc-77c7-4bb9-9821-c770c3454ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\2_Map">
       <UniqueIdentifier>{ab1cc7c2-0f8e-493b-b4be-8dc790640b7b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -39,14 +63,35 @@
     <ClInclude Include="Status.h">
       <Filter>2_Contents\0_ContentsBase</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>2_Contents\1_Actor</Filter>
-    </ClInclude>
     <ClInclude Include="Object.h">
       <Filter>1_Engine</Filter>
     </ClInclude>
     <ClInclude Include="World.h">
-      <Filter>2_Contents\2_Zone</Filter>
+      <Filter>2_Contents\2_Map</Filter>
     </ClInclude>
+    <ClInclude Include="EngineConst.h">
+      <Filter>0_Base</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineDebug.h">
+      <Filter>0_Base</Filter>
+    </ClInclude>
+    <ClInclude Include="FightUnit.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusUnit.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>2_Contents\1_Actor\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="FightZone.h" />
+    <ClInclude Include="Town.h" />
+    <ClInclude Include="Zone.h" />
   </ItemGroup>
 </Project>

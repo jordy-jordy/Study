@@ -1,5 +1,8 @@
 #pragma once
-class World
+
+class UWorld
 {
+public:
+	void InPlayer(class UPlayer& _Player);
 };
 

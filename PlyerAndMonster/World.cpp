@@ -8,38 +8,47 @@ void UWorld::InPlayer(class UPlayer& _Player)
 {
 	char InputName[100] = { 0, };
 
+	system("cls");
+
+	std::cout << "이름을 적어주세요" << std::endl;
+	std::cin >> InputName;
+
 	while (true)
 	{
+
+
 		system("cls");
-
-		std::cout << "이름을 적어주세요" << std::endl;
-		std::cin >> InputName;
-
 		printf_s("당신의 이름은 %s입니다. 결정하시겠습니까?\n", InputName);
 		printf_s("a. 결정\n");
 		printf_s("b. 재입력\n");
 		int Select = _getch();
-		bool IsEnd = false;
+		int IsEnd = 0;
 		switch (Select)
 		{
 		case 'a':
 		case 'A':
-			IsEnd = true;
+			IsEnd = 0;
 			break;
 		case 'b':
 		case 'B':
-			IsEnd = false;
+			IsEnd = 1;
+			system("cls");
+
+			std::cout << "이름을 적어주세요" << std::endl;
+			std::cin >> InputName;
 			break;
 		default:
 			printf_s("잘못된 선택입니다. 다시 선택해주세요\n", InputName);
 			_getch();
+			IsEnd = 2;
 			break;
 		}
 
-		if (true == IsEnd)
+		if (0 == IsEnd)
 		{
 			break;
 		}
+
 	}
 
 	// 마지막맵까지 여기서 이 방식으로 가면
