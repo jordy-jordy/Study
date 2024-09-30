@@ -32,9 +32,15 @@
     <ClCompile Include="Item.cpp">
       <Filter>2_Contents\1_Actor\Component</Filter>
     </ClCompile>
-    <ClCompile Include="FightZone.cpp" />
-    <ClCompile Include="Town.cpp" />
-    <ClCompile Include="Zone.cpp" />
+    <ClCompile Include="FightZone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Town.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0_Base">
@@ -90,8 +96,14 @@
     <ClInclude Include="Item.h">
       <Filter>2_Contents\1_Actor\Component</Filter>
     </ClInclude>
-    <ClInclude Include="FightZone.h" />
-    <ClInclude Include="Town.h" />
-    <ClInclude Include="Zone.h" />
+    <ClInclude Include="FightZone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Town.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
