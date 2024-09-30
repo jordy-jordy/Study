@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d404904b-2829-42eb-9573-925314593c98}</ProjectGuid>
-    <RootNamespace>TextRPG003ClassFile2</RootNamespace>
+    <ProjectGuid>{2b5ac432-1d97-4acc-b412-a53d065fdbbd}</ProjectGuid>
+    <RootNamespace>PlyerAndMonster</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>TextRPG003ClassFile</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="TextRPG003ClassFile.cpp" />
+    <ClCompile Include="PlyerAndMonster.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
