@@ -2,11 +2,25 @@
 #include "FightZone.h"
 #include "Town.h"
 #include "Player.h"
+#include <BaseSystem/EngineDebug.h>
+#include <BaseSystem/EngineFile.h>
+
+// #include "EngineFile.h"
+
+// #include "..\BaseSystem\EngineFile.h"
+// 정석적인 방법은 아닙니다.
+
+// #include < <= 시작하는 외부경로는 크게 2가지 기능의 영향을 받는다.
+
+
 #include <conio.h>
+
 
 
 void UWorld::PlayerNameSelect(class UPlayer& _Player)
 {
+	// C:\\
+
 	char InputName[100] = { 0, };
 
 	bool IsNameInput = true;
@@ -52,29 +66,61 @@ void UWorld::PlayerNameSelect(class UPlayer& _Player)
 		}
 	}
 
+	// 파일 저장
+
 	_Player.SetName(InputName);
 }
 
 void UWorld::PlayerZonePlay(class UPlayer& _Player)
 {
-	UTown TownZone;
-	TownZone.SetName("초보마을");
+	UTown TownZone0;
+	TownZone0.SetName("초보마을");
+
+	UTown TownZone1;
+	TownZone1.SetName("중급마을");
 
 	UFightZone FightZone;
 	FightZone.SetName("초보사냥터");
 
 	while (true)
 	{
-		TownZone.InPlayer(_Player);
+		// 여기
+
+		/*int Result =*/ TownZone0.InPlayer(_Player);
+		TownZone1.InPlayer(_Player);
+		FightZone.InPlayer(_Player);
 	}
 
 }
 
 void UWorld::InPlayer(class UPlayer& _Player)
 {
-	// PlayerNameSelect(_Player);
+	// 외부기로 헤더만 있고 CPP는 없다. 
+	UEngineFile File;
+	File.SetPath("SaveFile.Dat");
 
-	_Player.SetName("TestPlayer");
+	// 파일이 없을때
+	if (false == File.IsExits())
+	{
+		File.FileOpen("wb");
+
+		// 이름 정하고 나왔다.
+		PlayerNameSelect(_Player);
+		const char* Name = _Player.GetName();
+
+		// 문자열을 저장할때는 문제가 있다.
+		// 초반에는 안좋을수 있다.
+		// 저장할때 가장 쉬운 방법은 크기가 고정되어 있는 것이다.
+		File.Write(Name, NAMELEN);
+	}
+	else
+	{
+		File.FileOpen("rb");
+
+		char Arr[100] = {};
+		File.Read(Arr, NAMELEN);
+		_Player.SetName(Arr);
+	}
 
 	PlayerZonePlay(_Player);
 }
