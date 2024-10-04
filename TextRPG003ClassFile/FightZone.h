@@ -1,7 +1,6 @@
 #pragma once
 #include "Zone.h"
 
-// 컨텐츠 아키텍처
 class UFightZone : public UZone
 {
 public:

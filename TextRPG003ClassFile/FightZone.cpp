@@ -8,6 +8,6 @@ void UFightZone::InPlayer(class UPlayer& _Player)
 	_getch();
 	while (true)
 	{
-
+		
 	}
 }

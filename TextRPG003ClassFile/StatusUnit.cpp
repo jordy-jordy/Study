@@ -1,13 +1,10 @@
 #include "StatusUnit.h"
-#include "EngineDebug.h"
+#include <BaseSystem/EngineDebug.h>
 #include <iostream>
 
 void UStatusUnit::StatusRender()
 {
-    // 디버깅상 받는게 유리해서.
     const char* Name = GetName();
-    //printf_s("%s Status", GetName());
-    //int NameLan = static_cast<int>(strlen(GetName()));
     printf_s("%s Status", Name);
     int NameLan = static_cast<int>(strlen(Name));
     int StatusRand = static_cast<int>(strlen(" Status"));
