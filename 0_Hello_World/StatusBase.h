@@ -25,10 +25,10 @@ public:
 
 protected:
 private:
-	int HP;
-	int MP;
-	int ATT;
-	int DEF;
-	int SPEED;
+	int HP = 0;
+	int MP = 0;
+	int ATT = 0;
+	int DEF = 0;
+	int SPEED = 0;
 };
 
