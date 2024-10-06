@@ -11,6 +11,12 @@
     <ClCompile Include="EngineConst.cpp">
       <Filter>0_Base</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="FightUnit.cpp">
+      <Filter>2_Contents\0_ContentsBase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0_Base">
@@ -25,6 +31,9 @@
     <Filter Include="2_Contents\0_ContentsBase">
       <UniqueIdentifier>{a2b73952-4152-4e9f-9db7-57e8c6fc4dcf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="2_Contents\1_Actor">
+      <UniqueIdentifier>{2be0e367-1e9e-4a4f-a431-7e872bbc9e6f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StatusBase.h">
@@ -35,6 +44,12 @@
     </ClInclude>
     <ClInclude Include="EngineConst.h">
       <Filter>0_Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>2_Contents\1_Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="FightUnit.h">
+      <Filter>2_Contents\0_ContentsBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

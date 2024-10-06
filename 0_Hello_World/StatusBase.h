@@ -1,34 +1,78 @@
 #pragma once
-class StatusBase
+#include "Objects.h"
+
+class UStatusBase : public UObjects
 {
 public:
-	int GetHP(int _HP)
+	void SetHP(int _HP)
 	{
 		HP = _HP;
 	}
-	int GetHP(int _MP)
+	void SetMP(int _MP)
 	{
 		MP = _MP;
 	}
-	int GetHP(int _ATT)
+	void SetMinATT(int _MinATT)
 	{
-		ATT = _ATT;
+		MinATT = _MinATT;
 	}
-	int GetHP(int _DEF)
+	void SetMaxATT(int _MaxATT)
+	{
+		MaxATT = _MaxATT;
+	}
+	void SetDEF(int _DEF)
 	{
 		DEF = _DEF;
 	}
-	int GetHP(int _SPEED)
+	void SetSPEED(int _SPEED)
 	{
 		SPEED = _SPEED;
 	}
+
+	int GetHP()
+	{
+		return HP;
+	}
+	int GetMP()
+	{
+		return MP;
+	}
+	int GetMinATT()
+	{
+		return MinATT;
+	}
+	int GetMaxATT()
+	{
+		return MaxATT;
+	}
+	int GetDEF()
+	{
+		return DEF;
+	}
+	int GetSPEED()
+	{
+		return SPEED;
+	}
+
+	void SetPlaceCode(int _PlaceCode)
+	{
+		PlaceCode = _PlaceCode;
+	}
+	int GetPlaceCode()
+	{
+		return PlaceCode;
+	}
+	
 
 protected:
 private:
 	int HP = 0;
 	int MP = 0;
 	int ATT = 0;
+	int MinATT = 0;
+	int MaxATT = 0;
 	int DEF = 0;
 	int SPEED = 0;
+	int PlaceCode = 0;
 };
 
