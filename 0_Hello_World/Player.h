@@ -8,7 +8,6 @@ public:
 	UPlayer();
 
 
-
 protected:
 
 private:
