@@ -140,5 +140,11 @@ int main()
 	char test = "ABCD"[2];
 
 	return 0;
+
+
+
+	int a = 0;
+
+
 }
 
