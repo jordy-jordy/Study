@@ -44,7 +44,7 @@ void UWorld::PlayerNameSelect(class UPlayer& _Player)
 		default:
 			IsEnd = false;
 			IsNameInput = false;
-			printf_s("잘못된 선택입니다. 다시 선택해주세요\n", InputName);
+			printf_s("잘못된 선택입니다. 다시 선택해주세요\n");
 			_getch();
 			break;
 		}
@@ -58,22 +58,27 @@ void UWorld::PlayerNameSelect(class UPlayer& _Player)
 	_Player.SetName(InputName);
 }
 
+void UWorld::ZoneInit()
+{
+	TownZone0.SetName("초보마을");
+	TownZone1.SetName("중급마을");
+	FightZone.SetName("초보사냥터");
+
+	TownZone0.InterConnecting(&FightZone);
+}
+
+
 void UWorld::PlayerZonePlay(class UPlayer& _Player)
 {
-	UTown TownZone0;
-	TownZone0.SetName("초보 마을");
-
-	UTown TownZone1;
-	TownZone1.SetName("중급 마을");
-
-	UFightZone FightZone;
-	FightZone.SetName("초보 사냥터");
+	ZoneInit();
+	_Player.SetCurZone(0);
+	_Player.SetGold(10000000);
 
 	while (true)
 	{
-		int NowWhere = _Player.GetPlaceNum();
+		int SelectZone = _Player.GetCurZone();
 
-		switch (NowWhere)
+		switch (SelectZone)
 		{
 		case 0:
 			TownZone0.InPlayer(_Player);
@@ -81,7 +86,7 @@ void UWorld::PlayerZonePlay(class UPlayer& _Player)
 		case 1:
 			TownZone1.InPlayer(_Player);
 			break;
-		case 3:
+		case 2:
 			FightZone.InPlayer(_Player);
 			break;
 		default:

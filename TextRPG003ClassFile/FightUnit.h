@@ -3,5 +3,10 @@
 
 class UFightUnit : public UStatusUnit
 {
+public:
+
+protected:
+private:
+
 };
 

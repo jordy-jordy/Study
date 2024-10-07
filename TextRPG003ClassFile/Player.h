@@ -7,21 +7,25 @@ class UPlayer : public UFightUnit
 {
 public:
 	UPlayer();
+
+	void StatusRender() override;
 	void Equip(class Item* Weapon);
-	void SetPlaceNum(int _PlayerPlace)
+
+	void SetCurZone(int _Index)
 	{
-		PlaceNum = _PlayerPlace;
+		CurZoneIndex = _Index;
 	}
-	int GetPlaceNum()
+
+	int GetCurZone()
 	{
-		return PlaceNum;
+		return CurZoneIndex;
 	}
 
 protected:
 
 private:
 	class Item* Weapon = nullptr;
-	int PlaceNum = 0;
-
+	int CurZoneIndex = 0;
+	int EquipAtt = 0;
 };
 
