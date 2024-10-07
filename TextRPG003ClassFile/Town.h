@@ -1,9 +1,14 @@
 #pragma once
 #include "Zone.h"
+#include "BlackSmith.h"
 
 class UTown : public UZone
 {
 public:
-	int InPlayer(class UPlayer& _Player);
+	UTown();
+
+	UZone* InPlayer(class UPlayer& _Player/*, int& Result*/);
+
+	BlackSmith BS;
 };
 

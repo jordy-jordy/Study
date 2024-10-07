@@ -12,6 +12,7 @@ public:
 		return Name;
 	}
 
+
 private:
 	char Name[NAMELEN] = "NONE";
 };

@@ -35,6 +35,9 @@
     <ClCompile Include="Zone.cpp">
       <Filter>2_Contents\2_Map</Filter>
     </ClCompile>
+    <ClCompile Include="BlackSmith.cpp">
+      <Filter>2_Contents\2_Map\Building</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0_Base">
@@ -57,6 +60,9 @@
     </Filter>
     <Filter Include="2_Contents\1_Actor\Component">
       <UniqueIdentifier>{fddd9ba0-1abc-45ac-a68d-57b4a41ef92f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\2_Map\Building">
+      <UniqueIdentifier>{d1581f9e-a8ae-48eb-a8a4-1ae362f65c5e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="Zone.h">
       <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackSmith.h">
+      <Filter>2_Contents\2_Map\Building</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

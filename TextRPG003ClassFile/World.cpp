@@ -4,12 +4,18 @@
 #include "Player.h"
 #include <BaseSystem/EngineDebug.h>
 #include <BaseSystem/EngineFile.h>
+
+
+
+
+
 #include <conio.h>
 
 
 
 void UWorld::PlayerNameSelect(class UPlayer& _Player)
 {
+
 	char InputName[100] = { 0, };
 
 	bool IsNameInput = true;
@@ -55,6 +61,7 @@ void UWorld::PlayerNameSelect(class UPlayer& _Player)
 		}
 	}
 
+
 	_Player.SetName(InputName);
 }
 
@@ -70,33 +77,18 @@ void UWorld::ZoneInit()
 
 void UWorld::PlayerZonePlay(class UPlayer& _Player)
 {
-	ZoneInit();
-	_Player.SetCurZone(0);
-	_Player.SetGold(10000000);
+
+
+
+	UZone* CurZone = &TownZone0;
 
 	while (true)
 	{
-		int SelectZone = _Player.GetCurZone();
-
-		switch (SelectZone)
-		{
-		case 0:
-			TownZone0.InPlayer(_Player);
-			break;
-		case 1:
-			TownZone1.InPlayer(_Player);
-			break;
-		case 2:
-			FightZone.InPlayer(_Player);
-			break;
-		default:
-			break;
-		}
+		CurZone = CurZone->InPlayer(_Player);
 	}
-
 }
 
-void UWorld::InPlayer(class UPlayer& _Player)
+void UWorld::PlayerInit(class UPlayer& _Player)
 {
 	UEngineFile File;
 	File.SetPath("SaveFile.Dat");
@@ -118,6 +110,12 @@ void UWorld::InPlayer(class UPlayer& _Player)
 		File.Read(Arr, NAMELEN);
 		_Player.SetName(Arr);
 	}
+}
 
+void UWorld::InPlayer(class UPlayer& _Player)
+{
+	PlayerInit(_Player);
+
+	ZoneInit();
 	PlayerZonePlay(_Player);
 }
