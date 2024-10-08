@@ -7,12 +7,11 @@
 class UObjects
 {
 public:
+	void SetName(const char* const _Name);
 	const char* GetName()
 	{
 		return Name;
 	}
-
-	void SetName(const char* const _Name);
 
 protected:
 private:

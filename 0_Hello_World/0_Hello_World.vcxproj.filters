@@ -20,6 +20,18 @@
     <ClCompile Include="ContentsConst.cpp">
       <Filter>0_Base</Filter>
     </ClCompile>
+    <ClCompile Include="SafeZone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleZone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0_Base">
@@ -36,6 +48,9 @@
     </Filter>
     <Filter Include="2_Contents\1_Actor">
       <UniqueIdentifier>{2be0e367-1e9e-4a4f-a431-7e872bbc9e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2_Contents\2_Map">
+      <UniqueIdentifier>{cbfc15b3-e0b4-45d9-8c06-a010df4dc90d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +71,18 @@
     </ClInclude>
     <ClInclude Include="ContentsConst.h">
       <Filter>0_Base</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeZone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleZone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>2_Contents\2_Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>2_Contents\2_Map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

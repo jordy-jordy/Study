@@ -2,10 +2,10 @@
 #include "FightUnit.h"
 
 
-class Monster
+class UMonster
 {
 public:
-	Monster();
+	UMonster();
 
 protected:
 

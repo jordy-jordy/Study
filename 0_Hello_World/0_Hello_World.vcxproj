@@ -129,20 +129,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="0_Hello_World.cpp" />
+    <ClCompile Include="BattleZone.cpp" />
     <ClCompile Include="ContentsConst.cpp" />
     <ClCompile Include="FightUnit.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Objects.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SafeZone.cpp" />
+    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="StatusBase.cpp" />
+    <ClCompile Include="Zone.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BattleZone.h" />
     <ClInclude Include="ContentsConst.h" />
     <ClInclude Include="FightUnit.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Objects.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="SafeZone.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="StatusBase.h" />
+    <ClInclude Include="Zone.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseSystem\BaseSystem.vcxproj">
