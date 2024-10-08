@@ -129,15 +129,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="0_Hello_World.cpp" />
-    <ClCompile Include="EngineConst.cpp" />
+    <ClCompile Include="ContentsConst.cpp" />
     <ClCompile Include="FightUnit.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Objects.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="StatusBase.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EngineConst.h" />
+    <ClInclude Include="ContentsConst.h" />
     <ClInclude Include="FightUnit.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Objects.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="StatusBase.h" />
