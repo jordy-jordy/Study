@@ -1,10 +1,8 @@
 
 // 오브젝트들이 활동하는 공간을 Stage로 분류
-
 #pragma once
 #include "SafeZone.h"
 #include "BattleZone.h"
-
 
 class UStage
 {
@@ -15,8 +13,8 @@ public:
 protected:
 
 private:
-	USafeZone Town_Level0;
-	USafeZone Town_Level10;
-	UBattleZone Field_Level0;
+	USafeZone Town_LV0;
+	USafeZone Town_LV10;
+	UBattleZone Field_LV0;
 };
 

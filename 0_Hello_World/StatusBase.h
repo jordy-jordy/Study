@@ -53,25 +53,7 @@ public:
 	{
 		return SPEED;
 	}
-
-	void SetPlaceCode(int _PlaceCode)
-	{
-		PlaceCode = _PlaceCode;
-	}
-	int GetPlaceCode()
-	{
-		return PlaceCode;
-	}
-
-	void SetGold(int _Gold)
-	{
-		GOLD = _Gold;
-	}
-	int GetGold()
-	{
-		return GOLD;
-	}
-	
+		
 
 protected:
 private:
@@ -82,7 +64,5 @@ private:
 	int MaxATT = 0;
 	int DEF = 0;
 	int SPEED = 0;
-	int PlaceCode = 0;
-	int GOLD = 0;
 };
 
