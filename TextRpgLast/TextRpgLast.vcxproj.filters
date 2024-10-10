@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{34b611a0-dd33-4d91-baeb-8fc4849345d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{ea177113-256b-411f-8d32-2b18fa9c10c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{96440755-21e3-4afe-9679-9068ca0bb500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{daf6c798-66b0-41f1-9f56-eb5ca48f2e4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Actor">
+      <UniqueIdentifier>{e06969c8-d116-428f-898b-caf0e45b9c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Map">
+      <UniqueIdentifier>{ea98d408-7ba2-4c62-9756-065c2a622f4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Actor\Contents">
+      <UniqueIdentifier>{a7653898-1678-4b15-8c9e-473cc27f5a94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Actor\Contents\Monster">
+      <UniqueIdentifier>{257fd5fa-b88b-4778-9b91-77719a6cfe49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Map\Contents">
+      <UniqueIdentifier>{e8bbec71-ced6-49a2-bd7a-e314b59136fa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TextRpgCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRpgLast.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="FightUnit.cpp">
+      <Filter>Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusUnit.cpp">
+      <Filter>Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Object\Actor\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\Actor\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Goblin.cpp">
+      <Filter>Object\Actor\Contents\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Orc.cpp">
+      <Filter>Object\Actor\Contents\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>Object\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Object\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackSmith.cpp">
+      <Filter>Object\Map\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="FightZone.cpp">
+      <Filter>Object\Map\Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Town.cpp">
+      <Filter>Object\Map\Contents</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TextRpgCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="FightUnit.h">
+      <Filter>Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusUnit.h">
+      <Filter>Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Object\Actor\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object\Actor\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Goblin.h">
+      <Filter>Object\Actor\Contents\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Orc.h">
+      <Filter>Object\Actor\Contents\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>Object\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Object\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackSmith.h">
+      <Filter>Object\Map\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="FightZone.h">
+      <Filter>Object\Map\Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Town.h">
+      <Filter>Object\Map\Contents</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
