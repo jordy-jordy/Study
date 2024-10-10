@@ -85,4 +85,7 @@
       <Filter>2_Contents\2_Map</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="구조.txt" />
+  </ItemGroup>
 </Project>
