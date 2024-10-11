@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ConsoleGame.cpp" />
+    <ClCompile Include="Player.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleEngine.cpp" />
+    <ClCompile Include="ConsoleImage.cpp" />
+    <ClCompile Include="ConsoleWindow.cpp" />
+    <ClCompile Include="Enums.cpp" />
+    <ClCompile Include="GlobalValue.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{132af853-775e-47ad-a556-d6a50bf48337}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Player.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleEngine.h" />
+    <ClInclude Include="ConsoleImage.h" />
+    <ClInclude Include="ConsoleWindow.h" />
+    <ClInclude Include="Enums.h" />
+    <ClInclude Include="GlobalValue.h" />
+  </ItemGroup>
+</Project>
