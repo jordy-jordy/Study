@@ -3,10 +3,11 @@
 #include "Enums.h"
 #include "GlobalValue.h"
 #include "ConsoleEngine.h"
+#include "ConsoleImage.h"
 
 void Player::BeginPlay()
 {
-	PlayerImage.Create({ 1, 1 }, '@');
+	PlayerImage.Create({ 1, 1 }, 'O');
 }
 
 void Player::Tick(ConsoleImage* _BackBuffer)
@@ -50,32 +51,55 @@ void Player::Tick(ConsoleImage* _BackBuffer)
 
 	int WindowX = _BackBuffer->GetImageSizeX();
 	int WindowY = _BackBuffer->GetImageSizeY();
-	int PlayerX = Pos.X;
-	int PlayerY = Pos.Y;
-
-	if (PlayerX < 0)
-	{
-		Pos.X = 0;
-	}
-
+	int& PlayerX = Pos.X;
+	int& PlayerY = Pos.Y;
 
 	switch (Dir)
 	{
 	case Enums::GAMEDIR::LEFT:
-		Pos += FIntPoint::LEFT;
+		if (PlayerX - 1 < 0)
+		{
+			PlayerX = 0;
+		}
+		else 
+		{
+			Pos += FIntPoint::LEFT;
+		}
 		break;
 	case Enums::GAMEDIR::RIGHT:
-		Pos += FIntPoint::RIGHT;
+		if (PlayerX + 1 == WindowX)
+		{
+			PlayerX = WindowX - 1;
+		}
+		else
+		{
+			Pos += FIntPoint::RIGHT;
+		}
 		break;
 	case Enums::GAMEDIR::UP:
-		Pos += FIntPoint::UP;
+		if (PlayerY - 1 < 0)
+		{
+			PlayerY = 0;
+		}
+		else
+		{
+			Pos += FIntPoint::UP;
+		}
 		break;
 	case Enums::GAMEDIR::DOWN:
-		Pos += FIntPoint::DOWN;
+		if (PlayerY + 1 == WindowY)
+		{
+			PlayerY = WindowY - 1;
+		}
+		else
+		{
+			Pos += FIntPoint::DOWN;
+		}
 		break;
 	default:
 		break;
 	}
+
 
 }
 
@@ -87,4 +111,9 @@ void Player::Render(ConsoleImage* _BackBuffer)
 void Player::SetActorLocation(FIntPoint _Pos)
 {
 	Pos = _Pos;
+}
+
+void Player::PlayerBuffer()
+{
+	int PlayerSizeX = ConsoleImage * _X);
 }

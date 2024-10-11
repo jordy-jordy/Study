@@ -11,6 +11,8 @@ public:
 
 	void SetActorLocation(FIntPoint _Pos);
 
+	void PlayerBuffer();
+
 private:
 	FIntPoint Pos;
 	ConsoleImage PlayerImage;
