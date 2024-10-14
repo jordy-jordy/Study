@@ -5,7 +5,7 @@
 class GlobalValue
 {
 public:
-	
+
 	static FIntPoint WindowSize;
 
 	static UConsoleWindow* WindowPtr;

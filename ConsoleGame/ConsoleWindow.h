@@ -44,7 +44,6 @@ public:
 
 private:
 	int FrameDelay = 250;
-
 	ConsoleImage BackBuffer;
 };
 

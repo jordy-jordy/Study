@@ -1,6 +1,9 @@
 #pragma once
 #include "ConsoleWindow.h"
 #include "Player.h"
+#include "Bullet.h"
+#include "Monster.h"
+#include "ActorVector.h"
 
 class ConsoleEngine
 {
@@ -17,17 +20,30 @@ public:
 		return Window;
 	}
 
+	static ConsoleEngine& GetEngine()
+	{
+		return *MainEngine;
+	}
+
+	template<typename ActorType>
+	ActorType* SpawnActor()
+	{
+		ActorType* NewActor = new ActorType();
+		AllActorVector.push_back(NewActor);
+		NewActor->BeginPlay();
+		return NewActor;
+	}
+
 private:
 	ConsoleEngine();
 
 	static FIntPoint WindowSize;
 	static UConsoleWindow Window;
 
-	Player NewPlayer;
+	static ConsoleEngine* MainEngine;
 
-	void BeginPlay(); 
+	ActorVector AllActorVector;
 
-	void Tick(); 
-	void Render(); 
+	void BeginPlay(); 	void Tick(); 	void Render();
 };
 

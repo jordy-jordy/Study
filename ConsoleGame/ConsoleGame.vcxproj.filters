@@ -10,10 +10,26 @@
     <ClCompile Include="ConsoleWindow.cpp" />
     <ClCompile Include="Enums.cpp" />
     <ClCompile Include="GlobalValue.cpp" />
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Contents">
       <UniqueIdentifier>{132af853-775e-47ad-a556-d6a50bf48337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{a61369d6-9096-4470-aeba-1d71986bf225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{0578ea1f-991b-4603-b3cc-076d307b9a65}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,5 +41,15 @@
     <ClInclude Include="ConsoleWindow.h" />
     <ClInclude Include="Enums.h" />
     <ClInclude Include="GlobalValue.h" />
+    <ClInclude Include="Bullet.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorVector.h" />
   </ItemGroup>
 </Project>

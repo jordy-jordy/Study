@@ -47,12 +47,12 @@ void ConsoleImage::Clear(char _Clearchar)
 
 void ConsoleImage::SetPixel(FIntPoint _Pos, char _Char)
 {
-	if (0 > _Pos.X || X < _Pos.Y)
+	if (0 > _Pos.X || X < _Pos.X)
 	{
 		return;
 	}
 
-	if (0 > _Pos.Y || X < _Pos.X)
+	if (0 > _Pos.Y || X < _Pos.Y)
 	{
 		return;
 	}
