@@ -15,15 +15,11 @@ void Player::Tick()
 {
 	Super::Tick();
 
-
-
 	ConsoleEngine::GetWindow();
 	ConsoleEngine::GetWindowSize();
 
 	GlobalValue::WindowPtr;
 	GlobalValue::WindowSize;
-
-
 
 	int Value = _kbhit();
 	Enums::GAMEDIR Dir = Enums::GAMEDIR::NONE;

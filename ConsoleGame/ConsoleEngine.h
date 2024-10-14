@@ -44,6 +44,8 @@ private:
 
 	ActorVector AllActorVector;
 
-	void BeginPlay(); 	void Tick(); 	void Render();
+	void BeginPlay(); 	
+	void Tick(); 	
+	void Render();
 };
 

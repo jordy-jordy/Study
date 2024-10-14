@@ -6,5 +6,7 @@ class Monster : public AActor
 public:
 	void BeginPlay() override;
 	void Tick() override;
+
+private:
 };
 
