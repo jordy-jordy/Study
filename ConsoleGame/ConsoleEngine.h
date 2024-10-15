@@ -34,6 +34,12 @@ public:
 		return NewActor;
 	}
 
+
+
+
+
+
+
 private:
 	ConsoleEngine();
 
@@ -44,8 +50,8 @@ private:
 
 	ActorVector AllActorVector;
 
-	void BeginPlay(); 	
-	void Tick(); 	
+	void BeginPlay();
+	void Tick();
 	void Render();
 };
 

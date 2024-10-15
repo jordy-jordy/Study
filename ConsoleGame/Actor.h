@@ -17,16 +17,22 @@ public:
 
 	void AddActorLocation(FIntPoint _Pos);
 
-	FIntPoint GetCurPos()
+	FIntPoint GetActorLocation()
 	{
 		return Pos;
 	}
 
+	class Renderer* CreateDefaultSubObject();
+
+	class Renderer* GetImageRenderer()
+	{
+		return ImageRenderer;
+	}
 
 protected:
-	ConsoleImage RenderImage;
 
 private:
+	class Renderer* ImageRenderer;
 	FIntPoint Pos;
 };
 

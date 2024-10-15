@@ -7,6 +7,5 @@ public:
 	void BeginPlay() override;
 	void Tick() override;
 
-private:
 };
 

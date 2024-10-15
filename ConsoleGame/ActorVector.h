@@ -5,7 +5,7 @@ typedef class AActor* DataType;
 class ActorVector
 {
 public:
-	int size()
+	int size() const
 	{
 		return DataSize;
 	}
@@ -30,7 +30,7 @@ public:
 		++DataSize;
 	}
 
-	AActor* operator[](int _Index)
+	DataType& operator[](int _Index) const
 	{
 		return Values[_Index];
 	}

@@ -9,9 +9,6 @@ class UConsoleWindow
 public:
 	UConsoleWindow();
 
-
-
-
 	void BeginPlay();
 
 	void ScreenRender();
@@ -44,6 +41,7 @@ public:
 
 private:
 	int FrameDelay = 250;
+
 	ConsoleImage BackBuffer;
 };
 

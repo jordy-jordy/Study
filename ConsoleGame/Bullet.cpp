@@ -1,10 +1,13 @@
 #include "Bullet.h"
+#include "Renderer.h"
 
 
 void Bullet::BeginPlay()
 {
 	Super::BeginPlay();
-	RenderImage.Create({ 1, 1 }, 'I');
+
+	Renderer* Render = CreateDefaultSubObject();
+	Render->RenderImage.Create({ 1, 1 }, 'I');
 }
 
 void Bullet::Tick()

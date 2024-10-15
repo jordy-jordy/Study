@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include "GlobalValue.h"
 #include "Actor.h"
+#include "Monster.h"
 
 
 ConsoleEngine* ConsoleEngine::MainEngine = nullptr;
@@ -16,6 +17,10 @@ ConsoleEngine::ConsoleEngine()
 
 void ConsoleEngine::Start()
 {
+
+
+
+
 	ConsoleEngine Engine;
 
 	MainEngine = &Engine;
@@ -27,6 +32,7 @@ void ConsoleEngine::Start()
 		Engine.Tick();
 		Engine.Render();
 		Sleep(250);
+
 	}
 
 }
@@ -43,10 +49,15 @@ void ConsoleEngine::BeginPlay()
 	Window.SetScreenSize(WindowSize);
 
 	Player* NewPlayer = SpawnActor<Player>();
+
+	Monster* NewMonster = SpawnActor<Monster>();
+	NewMonster->SetActorLocation({ 1, 1 });
+
 }
 
 void ConsoleEngine::Tick()
 {
+
 	for (size_t i = 0; i < AllActorVector.size(); i++)
 	{
 		AllActorVector[i]->Tick();

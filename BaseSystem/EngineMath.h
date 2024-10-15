@@ -21,12 +21,17 @@ public:
 
 	}
 
-	FIntPoint operator+(FIntPoint _Other)
+	FIntPoint operator+(FIntPoint _Other) const
 	{
 		FIntPoint Result;
 		Result.X = X + _Other.X;
 		Result.Y = Y + _Other.Y;
 		return Result;
+	}
+
+	bool operator==(FIntPoint _Other) const
+	{
+		return X == _Other.X && Y == _Other.Y;
 	}
 
 	FIntPoint& operator+=(FIntPoint _Other)
