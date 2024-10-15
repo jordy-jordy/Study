@@ -62,7 +62,6 @@ public:
 			reserve(CapacityValue * 1.5);
 		}
 
-
 		Datas[SizeValue] = _Data;
 
 		++SizeValue;
