@@ -8,11 +8,13 @@ public:
 	void Tick() override;
 
 	void MoveBlock();
+
 	void SetStackBlock();
 
-	bool CheckStack();
+	bool IsBlockBelow();
 
-	bool IsStack = false;
+
+
 
 };
 

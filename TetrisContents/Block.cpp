@@ -2,7 +2,6 @@
 #include <EngineCore/Renderer.h>
 #include <EngineCore/ConsoleEngine.h>
 #include <EngineCore/ConsoleWindow.h>
-#include <EngineCore/ConsoleImage.h>
 #include <conio.h>
 
 #include "BlockCover.h"
@@ -11,45 +10,53 @@
 void Block::BeginPlay()
 {
 	Super::BeginPlay();
-	UBlockCover::Ptr;
+
 
 	Renderer* Render = CreateDefaultSubObject();
 	Render->RenderImage.Create({ 1, 1 }, '@');
 }
 
+void Block::Tick()
+{
+	Super::Tick();
+	MoveBlock();
+}
+
 void Block::SetStackBlock()
 {
+	UBlockCover* Window = UBlockCover::Ptr;
+	Renderer* Renderer = Window->GetImageRenderer();
 
 	FIntPoint CurPos = GetActorLocation();
 	FIntPoint WindowSize = ConsoleEngine::GetEngine().GetWindow()->GetScreenSize();
 
-	UBlockCover* Window = UBlockCover::Ptr;
-	Renderer* Renderer = Window->GetImageRenderer();
-
-	//if (CurPos.X < WindowSize.X && CurPos.Y < WindowSize.Y)
-	char IsStack = Renderer->RenderImage.GetPixel(CurPos.X, CurPos.Y + 1);
-
-	
-	if (CurPos.Y == WindowSize.Y - 1 /*|| IsStack == '@'*/)
+	if (CurPos.Y == WindowSize.Y - 1 || IsBlockBelow())
 	{
 		Renderer->RenderImage.SetPixel({ CurPos.X, CurPos.Y }, '@');
 		SetActorLocation({ 0, 0 });
 	}
 }
 
-//bool Block::CheckStack()
-//{
-//	FIntPoint BlockPos = GetActorLocation();
-//
-//	if (BlockPos.Y + 1 == '@')
-//	{
-//		return true;
-//	}
-//	return;
-//}
+bool Block::IsBlockBelow()
+{
+	UBlockCover* Window = UBlockCover::Ptr;
+	Renderer* Renderer = Window->GetImageRenderer();
+
+	FIntPoint CurPos = GetActorLocation();
+	FIntPoint BelowPos = CurPos + FIntPoint::DOWN; 
+
+	if (Renderer->RenderImage.GetPixel(BelowPos.X,BelowPos.Y) == '@')
+	{
+		return true; 
+	}
+
+	return false; 
+}
 
 void Block::MoveBlock()
 {
+	FIntPoint CurPos = GetActorLocation();
+	FIntPoint WindowSize = ConsoleEngine::GetEngine().GetWindow()->GetScreenSize();
 
 	int Value = _kbhit();
 	if (Value != 0)
@@ -60,39 +67,40 @@ void Block::MoveBlock()
 		{
 		case 'A':
 		case 'a':
-			AddActorLocation(FIntPoint::LEFT);
+			if (CurPos.X > 0)
+			{
+				AddActorLocation(FIntPoint::LEFT);
+			}
 			break;
 		case 'D':
 		case 'd':
-			AddActorLocation(FIntPoint::RIGHT);
+			if (CurPos.X < WindowSize.X - 1)
+			{
+				AddActorLocation(FIntPoint::RIGHT);
+			}
 			break;
 		case 'W':
 		case 'w':
-			AddActorLocation(FIntPoint::UP);
+			if (CurPos.Y > 0)
+			{
+				AddActorLocation(FIntPoint::UP);
+			}
 			break;
 		case 'S':
 		case 's':
-			AddActorLocation(FIntPoint::DOWN);
-			SetStackBlock();
+			if (IsBlockBelow())
+			{
+				SetStackBlock(); 
+			}
+			else
+			{
+				AddActorLocation(FIntPoint::DOWN); 
+				SetStackBlock();
+			}
 			break;
 		default:
 			break;
 		}
-
 	}
-
 }
-
-
-
-
-void Block::Tick()
-{
-	Super::Tick();
-	
-	MoveBlock();
-
-
-}
-
 
