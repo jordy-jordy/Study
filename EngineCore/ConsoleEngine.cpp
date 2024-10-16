@@ -1,10 +1,7 @@
-// 상속헤더
 #include "ConsoleEngine.h"
 
-// Platform
 #include <Windows.h>
 
-// User
 #include "ConsoleWindow.h"
 #include "Actor.h"
 
@@ -16,7 +13,6 @@ ConsoleEngine::ConsoleEngine()
 }
 
 
-// void ConsoleEngine::Start(void(*Ptr)(ConsoleEngine*))
 void ConsoleEngine::Start(class UserInit* _Init)
 {
 	ConsoleEngine Engine;
@@ -27,8 +23,6 @@ void ConsoleEngine::Start(class UserInit* _Init)
 
 	_Init->UserBeginPlay(&Engine);
 
-	// 콜백
-	// Ptr(&Engine);
 
 	while (true == Engine.EngineActive)
 	{
@@ -54,11 +48,8 @@ void ConsoleEngine::BeginPlay()
 	Window = new UConsoleWindow();
 	Window->BeginPlay();
 
-	// 대리객체 방법이 있습니다.
 
-	// 나중에 배우겠습니다.
-	// 함수포인터로 하는법
-	Window->SetScreenSize({10, 10});
+	Window->SetScreenSize({ 10, 10 });
 }
 
 void ConsoleEngine::Tick()

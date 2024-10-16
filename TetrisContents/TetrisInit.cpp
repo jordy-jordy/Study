@@ -3,13 +3,13 @@
 #include <EngineCore/ConsoleWindow.h>
 
 #include "Block.h"
-#include "UnvisibleWindow.h"
+#include "BlockCover.h"
 
 
 void TetrisInit::UserBeginPlay(ConsoleEngine* _MainEngine)
 {
 	// 시작을 합니다.
 	_MainEngine->GetWindow()->SetScreenSize({3, 5});
-	_MainEngine->SpawnActor<UnvisibleWindow>();
+	_MainEngine->SpawnActor<UBlockCover>();
 	_MainEngine->SpawnActor<Block>();
 }

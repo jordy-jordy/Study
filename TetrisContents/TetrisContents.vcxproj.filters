@@ -3,11 +3,11 @@
   <ItemGroup>
     <ClInclude Include="TetrisInit.h" />
     <ClInclude Include="Block.h" />
-    <ClInclude Include="UnvisibleWindow.h" />
+    <ClInclude Include="BlockCover.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="TetrisInit.cpp" />
-    <ClCompile Include="UnvisibleWindow.cpp" />
+    <ClCompile Include="BlockCover.cpp" />
   </ItemGroup>
 </Project>

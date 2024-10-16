@@ -20,13 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
+    <ClInclude Include="BlockCover.h" />
     <ClInclude Include="TetrisInit.h" />
-    <ClInclude Include="UnvisibleWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="BlockCover.cpp" />
     <ClCompile Include="TetrisInit.cpp" />
-    <ClCompile Include="UnvisibleWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EngineCore\EngineCore.vcxproj">

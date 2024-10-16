@@ -6,5 +6,13 @@ class Block : public AActor
 public:
 	void BeginPlay() override;
 	void Tick() override;
+
+	void MoveBlock();
+	void SetStackBlock();
+
+	bool CheckStack();
+
+	bool IsStack = false;
+
 };
 
