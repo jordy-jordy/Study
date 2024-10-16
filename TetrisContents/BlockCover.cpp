@@ -4,14 +4,13 @@
 
 UBlockCover* UBlockCover::Ptr = nullptr;
 
+
 void UBlockCover::BeginPlay()
 {
 	Super::BeginPlay();
 
 	Renderer* Render = CreateDefaultSubObject();
 	Render->RenderImage.Create({ 3, 5 }, '-');
-
-
 
 	UBlockCover::Ptr = this;
 }

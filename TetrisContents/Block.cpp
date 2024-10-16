@@ -2,6 +2,7 @@
 #include <EngineCore/Renderer.h>
 #include <EngineCore/ConsoleEngine.h>
 #include <EngineCore/ConsoleWindow.h>
+#include <EngineCore/ConsoleImage.h>
 #include <conio.h>
 
 #include "BlockCover.h"
@@ -19,16 +20,19 @@ void Block::BeginPlay()
 void Block::SetStackBlock()
 {
 
-	FIntPoint BlockPos = GetActorLocation();
+	FIntPoint CurPos = GetActorLocation();
 	FIntPoint WindowSize = ConsoleEngine::GetEngine().GetWindow()->GetScreenSize();
-	FIntPoint DownPos = BlockPos + FIntPoint::DOWN;
 
 	UBlockCover* Window = UBlockCover::Ptr;
 	Renderer* Renderer = Window->GetImageRenderer();
 
-	if (BlockPos.Y == WindowSize.Y - 1 || BlockPos.Y + 1 == '@')
+	//if (CurPos.X < WindowSize.X && CurPos.Y < WindowSize.Y)
+	char IsStack = Renderer->RenderImage.GetPixel(CurPos.X, CurPos.Y + 1);
+
+	
+	if (CurPos.Y == WindowSize.Y - 1 /*|| IsStack == '@'*/)
 	{
-		Renderer->RenderImage.SetPixel({ BlockPos.X, BlockPos.Y }, '@');
+		Renderer->RenderImage.SetPixel({ CurPos.X, CurPos.Y }, '@');
 		SetActorLocation({ 0, 0 });
 	}
 }
