@@ -1,4 +1,5 @@
 #pragma once
+#include <assert.h>
 
 
 typedef int DataType;
@@ -8,7 +9,6 @@ class UList
 public:
 	class UListNode
 	{
-
 	public:
 		UListNode* Prev = nullptr;
 		UListNode* Next = nullptr;
@@ -18,25 +18,68 @@ public:
 public:
 	class iterator
 	{
+		friend UList;
+
 	public:
+		iterator()
+		{
+
+		}
+
+		bool operator!=(const iterator& _Other)
+		{
+			return CurNode != _Other.CurNode;
+		}
+
+		DataType& operator*()
+		{
+			return CurNode->Data;
+		}
+
+		iterator& operator++()
+		{
+			CurNode = CurNode->Next;
+			return *this;
+		}
+
+		DataType& GetValue()
+		{
+			return CurNode->Data;
+		}
+
 	private:
-		UListNode* CurNode;
+		iterator(UListNode* _Node)
+			: CurNode(_Node)
+		{
+
+		}
+
+		UListNode* CurNode = nullptr;
 	};
 
 public:
 	UList()
 	{
-		Start = new UListNode();
-		End = new UListNode();
-		Start->Data = -1;
-		End->Data = -1;
+		StartNode = new UListNode();
+		EndNode = new UListNode();
 
-		Start->Next = End;
-		End->Prev = Start;
+		StartNode->Data = -1;
+		EndNode->Data = -1;
+
+		StartNode->Next = EndNode;
+		EndNode->Prev = StartNode;
 	}
 
 	~UList()
 	{
+		UListNode* CurNode = StartNode;
+
+		while (nullptr != CurNode)
+		{
+			UListNode* NextNode = CurNode->Next;
+			delete CurNode;
+			CurNode = NextNode;
+		}
 
 	}
 
@@ -45,11 +88,11 @@ public:
 		UListNode* ListNode = new UListNode();
 		ListNode->Data = _Data;
 
-		ListNode->Prev = Start;
-		ListNode->Next = Start->Next;
+		ListNode->Prev = StartNode;
+		ListNode->Next = StartNode->Next;
 
-		Start->Next->Prev = ListNode;
-		Start->Next = ListNode;
+		StartNode->Next->Prev = ListNode;
+		StartNode->Next = ListNode;
 	}
 
 	void push_back(const DataType& _Data)
@@ -57,18 +100,59 @@ public:
 		UListNode* ListNode = new UListNode();
 		ListNode->Data = _Data;
 
-		ListNode->Next = End;
-		ListNode->Prev = End->Prev;
+		ListNode->Next = EndNode;
+		ListNode->Prev = EndNode->Prev;
 
-		End->Prev->Next = ListNode;
-		End->Prev = ListNode;
+		EndNode->Prev->Next = ListNode;
+		EndNode->Prev = ListNode;
+	}
 
+	iterator erase(iterator& _Data)
+	{
+		UListNode* CurNode = _Data.CurNode;
+		if (CurNode == nullptr)
+		{
+			assert(false);
+			return iterator();
+		}
+
+		if (CurNode == StartNode)
+		{
+			assert(false);
+			return iterator();
+		}
+
+		if (CurNode == EndNode)
+		{
+			assert(false);
+			return iterator();
+		}
+
+		UListNode* ReturnNode = CurNode->Next;
+
+		CurNode->Prev->Next = CurNode->Next;
+		CurNode->Next->Prev = CurNode->Prev;
+
+		delete CurNode;
+		CurNode = nullptr;
+
+		return iterator(ReturnNode);
+	}
+
+	iterator begin()
+	{
+		return iterator(StartNode->Next);
+	}
+
+	iterator end()
+	{
+		return iterator(EndNode);
 	}
 
 
 private:
-	UListNode* Start = nullptr;
-	UListNode* End = nullptr;
+	UListNode* StartNode = nullptr;
+	UListNode* EndNode = nullptr;
 
 };
 
